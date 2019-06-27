@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    color: white;
+    
 }
 
 .banner-img {
@@ -22,6 +24,12 @@ body {
     right:0;
     bottom:0;
     color:#fff;
-    height:100px;
+    height:200px;
     animation-delay: 1s;
+    font-size: 7em;
+}
+
+.carousel-item img{
+    width: auto;
+    height: 700px;
 }
