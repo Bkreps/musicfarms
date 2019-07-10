@@ -1,8 +1,6 @@
-document.querySelectorAll('.imggal').addEventListener('click', function() {
-  // openModal();
-});
-
-
+// .addEventListener('click', function() {
+//   openModal();
+// });
 
 document.querySelector('.close').addEventListener('click', function() {
   document.getElementById("myModal").style.display = "none";
@@ -16,32 +14,40 @@ document.querySelector('.prev').addEventListener('click', function() {
   });
   
 
- 
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
+  function clicky() {
+    var openMSlider = document.querySelectorAll('.imggal');
+  
+  for (i = 0; i < openMSlider.length; i++) {
+    openMSlider[i].addEventListener('click', openModal);
+  }
+  
+  }
+  
+  clicky();
+  
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  
+  function plusSlides(num) {
+  showSlides(slideIndex += num);
 }
 
-
-
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide(num) {
+    showSlides(slideIndex = num);
   }
   
   var slideIndex = 1;
   showSlides(slideIndex);
   
   
-  function showSlides(n) {
+  function showSlides(num) {
     var slides = document.getElementsByClassName("slides");
-    if (n > slides.length) {
+    if (num > slides.length) {
         slideIndex = 1
     }
-    if (n < 1) {
+    if (num < 1) {
         slideIndex = slides.length
     }
     for (i = 0; i < slides.length; i++) {
