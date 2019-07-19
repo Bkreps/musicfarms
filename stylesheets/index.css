@@ -1,25 +1,52 @@
 body {
-    background-color: black;
+    background-color: pink;
     color: white;
+    margin:0;
+    padding:0;
     
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;    
+}
+
+#mainNavbar .nav-link {
+    color: white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #EA1C2C;
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+    font-size: 1.5rem;
+}
+
+.navbar.scrolled {
+    background: rgb(222,192,222);
+    transition: background 500ms;
 }
 
 .banner-img {
     width: 100%;
     z-index: 0;
+    margin: 0;
 }
 
-.banner {
+ .banner {
     width: 100%;
     height:auto;
-    margin: auto;
-    text-align:center;
-    position:relative;
-}
+    margin: 0;
+    position:relative;  
+} 
+
+
 .banner h1 {
     position: absolute;
     margin: auto;
-    top: 0;
+    top: 20%;
     left:0;
     right:0;
     bottom:0;
@@ -27,9 +54,32 @@ body {
     height:200px;
     animation-delay: 1s;
     font-size: 7em;
+    text-align: center;
+    width: 60%;
+    z-index: 999;
 }
 
-.carousel-item img{
+@media only screen and (max-width: 425px) {
+    .banner h1{
+        font-size: 5em;
+        top: 10%;
+    }
+  }
+
+  .carousel-con {
+      padding-top: 30px;
+  }
+
+
+  .carousel-item img{
     width: auto;
     height: 700px;
 }
+
+/* Accomodations page */
+
+#acchead {
+    padding-top: 100px;
+    text-align: center;
+}
+
